@@ -2,6 +2,8 @@ name: variablen_csv
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:
 jobs:
   build:
@@ -13,4 +15,4 @@ jobs:
           python-version: 3.8
       - name: Python Skript
         run: |
-          python Git_Skripte\Variablen_csv.py
+          python ./Git_Skripte/Variablen_csv.py
