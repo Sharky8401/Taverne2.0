@@ -7,8 +7,6 @@ public class Wuerfel{
 	Attribute sind nur lesbar nicht beschreibbar.
 	Kann einmal oder mehrmals gewürfelt werden.
 	*/
-
-	public static void Main(){}
 	
 	private int _seiten;
 	private int _untere_Grenze=1;
@@ -32,16 +30,20 @@ public class Wuerfel{
 	wuerfeln kann ohne Parameter aufgerufen werden und returned einen Integer
 	wuerfeln kann auch mit einem Anzahl Parameter aufgerufen werden und returned eine Liste von Integers
 	*/
-	public int wuerfeln(){
+	public int wuerfeln()
+	{
 		Random rnd = new Random();
 		int ergebnis=rnd.Next(_untere_Grenze,_seiten+1);
 		return ergebnis;
 	}
-	public List<int> wuerfeln(uint pAnzahl){
+	public List<int> wuerfeln(uint pAnzahl)
+	{
 		Random rnd = new Random();
 		List<int> ergebnisse = new List<int>();
-		if(pAnzahl>0){
-			for(int j=0;j<pAnzahl+1;j++){
+		if(pAnzahl>0)
+		{
+			for(int j=0;j<pAnzahl+1;j++)
+			{
 				ergebnisse.Add(rnd.Next(_untere_Grenze,_seiten+1));
 			}
 		}
