@@ -19,3 +19,4 @@ Staerke    int    Stärkewert eines NSC
 Geschick    int   Geschickwert eines NSC
 Ki    int   KIwert eines NSC
 Xp    int   Erfahrungspunkte eines NSC
+Staerkebonus	int		Schadensbonus durch den Stärkewert des Spielers
