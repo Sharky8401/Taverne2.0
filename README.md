@@ -6,3 +6,10 @@ Draft - Regeln und Guidelines
 4. Bitte immer in einem eigenem Branch arbeiten, und mit einer Pull request abschließen.
 5. Jeder darf Pull Requests beantworten, aber (bitte bitte) nicht die eigenen Requests. Vor Merge guckt eine zweite Person drauf.
 6. Wenn eine Pull Request ein Issue abschließt, die PR mit dem Issue verlinken (https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)
+7. Code-Schönheit: Nicht an Leerzeilen Sparen. Zwischen Codeblöcken (Wie z.B. Methoden) eine Zeile freilassen, ein Codeblock startet mit einer geschweiften Klammer in einer neuen Zeile, der Code fängt in der nächsten an, der Block endet mit einer geschweiften Klammer, die alleine in der Zeile steht.
+  Bsp.:
+  Methodenkopf
+  {
+  Codeblock inhalt;
+  }
+8. Nutzen der in C# automatisch implementierten Get/Set Methoden. Ist einfach zeit- und platzsparend.
