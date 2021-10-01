@@ -4,3 +4,5 @@ WName				String		Name der Waffe
 WSchaden			int		Grundschaden der Waffe (ohne Stärkebonus)
 Schadensart			bool		Art des Schadens (TRUE = Normal, also Rüstung zählt; FALSE = RuA, also Rüstungsunabhängig, direkte Auswirkung auf Lebenspunkte)
 Staerkeeinfluss			bool		TRUE = Stärke beeinflusst Schaden; FALSE = Kein Einfluss auf Schaden durch Stärkebonus
+Seiten        int   Seitenanzahl eines Würfel
+Untere_Grenze     int   Niedrigster Wert, den ein Würfel annehmen kann
