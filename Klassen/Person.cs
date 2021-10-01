@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 public abstract class Person
 {
-    private String CName { get; set; }
-    private int Level { get; set; }
-    private List<Waffe> Waffen; //Liste an Waffen
-    private int aktuelleWaffe { get; set; } //Index der Waffe in der Liste der Waffen
-    private int DefR { get; set; } //Rüstungswerte (R = (Körper-)Rüstung,
-    private int DefH { get; set; } //H = Helm
-    private int DefS { get; set; } //S = Schild
+    public String CName { get; set; }
+    public int Level { get; set; } = 0;
+    public List<Waffe> Waffen; //Liste an Waffen
+    public int aktuelleWaffe { get; set; } = 0;//Index der Waffe in der Liste der Waffen
+    public int DefR { get; set; } = 1;//Rüstungswerte (R = (Körper-)Rüstung,
+    public int DefH { get; set; } = 1;//H = Helm
+    public int DefS { get; set; } //S = Schild
 
     public void erhoeheLevel()
     {
