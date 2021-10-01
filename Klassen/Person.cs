@@ -7,8 +7,8 @@ public abstract class Person
     private int Level { get; set; }
     private List<Waffe> Waffen; //Liste an Waffen
     private int aktuelleWaffe { get; set; } //Index der Waffe in der Liste der Waffen
-    private int DefR { get; set; } //Rüstungswerte (R = (Körper-)Rüstung,
-    private int DefH { get; set; } //H = Helm
+    private int DefR { get; set; } = 1 //Rüstungswerte (R = (Körper-)Rüstung,
+    private int DefH { get; set; } = 1 //H = Helm
     private int DefS { get; set; } //S = Schild
 
     public void erhoeheLevel()
