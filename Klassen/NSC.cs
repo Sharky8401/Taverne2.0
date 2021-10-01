@@ -17,7 +17,7 @@ public class NSC : Person
     */
     public NSC(string pCName, int pLevel, int pDefR, int DefH, int DefS, int pMax_LP, int pStaerke, int pGeschick, int pKI)
     {
-        CName = pName;
+        CName = pCName;
         Level = pLevel;
         DefR = pDefR;
         DefH = pDefH;
