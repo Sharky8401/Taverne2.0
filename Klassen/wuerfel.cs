@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class Wuerfel{
 	/*
-	Würfel, der mit einer Seitenanzhal erzeugt werden muss, und optional eine untere Grenze definieren kann (Standard 1).
+	Würfel, der mit einer Seitenanzahl erzeugt werden muss, und optional eine untere Grenze definieren kann (Standard 1).
 	Attribute sind nur lesbar nicht beschreibbar.
 	Kann einmal oder mehrmals gewürfelt werden.
 	*/
