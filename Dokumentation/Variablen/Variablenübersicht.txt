@@ -13,3 +13,9 @@ aktuelleWaffe	int		Index der aktuell ausgerüsteten Waffe der Person
 DefR	int		Schutz am Körper (Rüstung)
 DefH	int		Schutz am Kopf (Helm)
 DefS	int		Schildverteidigung
+Max_LP    int   Maximale Lebenspunkte, die ein NSC erreichen kann
+Mom_LP    int   Momentane Lebenspunkte, eines NSC
+Staerke    int    Stärkewert eines NSC
+Geschick    int   Geschickwert eines NSC
+Ki    int   KIwert eines NSC
+Xp    int   Erfahrungspunkte eines NSC
