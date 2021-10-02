@@ -6,4 +6,17 @@ Schadensart			bool		Art des Schadens (TRUE = Normal, also Rüstung zählt; FALSE
 Staerkeeinfluss			bool		TRUE = Stärke beeinflusst Schaden; FALSE = Kein Einfluss auf Schaden durch Stärkebonus
 Seiten        int   Seitenanzahl eines Würfel
 Untere_Grenze     int   Niedrigster Wert, den ein Würfel annehmen kann
+CName		String		Name der Person
+Level		int		Level der Person
+Waffen		Liste<Waffe>	Liste an Waffen der Person
+aktuelleWaffe	int		Index der aktuell ausgerüsteten Waffe der Person
+DefR	int		Schutz am Körper (Rüstung)
+DefH	int		Schutz am Kopf (Helm)
+DefS	int		Schildverteidigung
+Max_LP    int   Maximale Lebenspunkte, die ein NSC erreichen kann
+Mom_LP    int   Momentane Lebenspunkte, eines NSC
+Staerke    int    Stärkewert eines NSC
+Geschick    int   Geschickwert eines NSC
+Ki    int   KIwert eines NSC
+Xp    int   Erfahrungspunkte eines NSC
 Staerkebonus	int		Schadensbonus durch den Stärkewert des Spielers
