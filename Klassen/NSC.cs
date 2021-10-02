@@ -15,7 +15,7 @@ public class NSC : Person
     /*
     NSC muss mit Max LP, Stärke, Geschick und KI erstellt werden
     */
-    public NSC(string pCName, int pLevel, int pDefR, int DefH, int DefS, int pMax_LP, int pStaerke, int pGeschick, int pKI)
+    public NSC(string pCName, int pLevel, int pDefR, int pDefH, int pDefS, int pMax_LP, int pStaerke, int pGeschick, int pKI)
     {
         CName = pCName;
         Level = pLevel;
