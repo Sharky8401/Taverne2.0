@@ -13,3 +13,4 @@ Draft - Regeln und Guidelines
   Codeblock inhalt;
   }
 8. Nutzen der in C# automatisch implementierten Get/Set Methoden. Ist einfach zeit- und platzsparend.
+9. In diesem Pen&Paper wird ziemlich alles abgerundet - bitte im Kopf behalten. Selbst eine 1,99 würde auf 1 abgerundet werden.
