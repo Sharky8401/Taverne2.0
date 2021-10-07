@@ -1,0 +1,106 @@
+Kampf Gesamt Ablauf Notizen
+Besonders Pseudocode am Ende muss in Issues übertragen werden
+
+Vorbereitung/Start
+	Spieler und NSCs können in Spielerliste hinzugefügt werden
+	NSCs in Gegnerliste hinzufügen
+Gegnerrunde
+	Gegnerliste bearbeiten (Gegner entfernen/hinzufügen)
+	Einzelnen Gegner bearbeiten
+	Gegner greift an (Ziel aussuchen aus beiden Listen)
+		Liste ist Spielerliste
+			Typ des Ziels bestimmen (Spieler/NSC)
+			falls Gegner Spieler angreift
+				Schaden aus SchadenBerechnen Methode wird ausgegeben //SchadenBerechnen Entwurf folgt unten
+			Gegner greift NSC an
+				Wenn NSC.DefS nicht 0
+					Blocken //folgt unten
+				Schaden aus SchadenBerechnen Methode wird von NSC LP abgezogen
+				Wenn NSC LP auf 0 fallen
+					Methode FrEntf //Kurz für Freund entfernen, folgt unten
+		Liste ist Gegnerliste
+			Wenn Gegner.DefS nicht 0
+				Blocken
+			Schaden aus SchadenBerechnen Methode wird von Gegner LP abgezogen
+			Wenn Gegner LP auf 0 fallen
+				Methode GegnerEntf //folgt unten
+Spielerrunde
+	Spielerliste bearbeiten (Spieler/NSCs hinzufügen/entfernen)
+	Spieler bearbeiten
+	NSC bearbeiten
+	Freund greift an //Freund steht hier für eine Person aus der Spielerliste
+		Waffe auswählen
+		Liste auswählen
+			Wenn Spielerliste
+				Freund auswählen
+					Wenn Spieler
+						SchadenBerechnen und Schaden ausgeben
+					Wenn NSC
+						Wenn NSC.DefS nicht 0
+							Blocken
+						Schaden aus SchadenBerechnen Methode wird von NSC LP abgezogen
+						Wenn NSC LP auf 0 fallen
+							Methode FrEntf
+			Wenn Gegnerliste
+				Gegner auswählen
+					Wenn Gegner.DefS nicht 0
+						Blocken
+					Schaden aus SchadenBerechnen Methode wird von Gegner LP abgezogen
+					Wenn Gegner LP auf 0 fallen
+						Methode GegnerEntf
+Kampf Ende
+	Liste aller NSCs die für EXP zählen (Friedhof)
+		Name
+		EXP
+	Summe der Exp
+
+Klasse Kampf Attribute
+	list<Person> Spielerseite
+	list<NSC> Gegnerseite
+	list<NSC> Friedhof
+
+Pseudocode Methoden
+
+Public int SchadenBerechnen(Person Angreifer, Person Verteidiger)
+	Dmg = Angreifer.AngriffDmg
+	uint Trefferzone = input	//0 = Rüstung, 1 = Helm, 2 = Direkt
+	while Trefferzone > 2
+		Trefferzone = input
+	Wenn Angreifer.Waffen[Angreifer.aktuelleWaffe].Schadensart = false
+		return Dmg
+	sonst
+		Dmg -= Verteidiger.DefS
+		Wenn Trefferzone = 0
+			return Dmg/Verteidiger.DefR
+		Wenn Trefferzone = 1
+			return Dmg/Verteidiger.DefH
+		Wenn Trefferzone = 2
+			return Dmg
+
+Public bool blocken(NSC Verteidiger)
+	Bonus = Verteidiger.Geschick/20
+	Wuerfel w20 = new Wuerfel(20)
+	wenn w20.wuerfeln()+Bonus > 18
+		return true
+	sonst
+		return false
+		
+Public void FrEntf(int Index) //Index = stelle des zu entfernenden Freundes in Spielerseite
+	while Spielerseite[Index].class == Spieler
+		Index = input
+	bool zähltExp = input
+	wenn zähltExp == true
+		Friedhof.add(Spielerseite[Index]
+	Spielerseite[Index].entfernen
+	
+Public void GegnerEntf(int Index)
+	bool zähltExp = input
+	wenn zähltExp == true
+		Friedhof.add(Gegnerseite[Index]
+	Gegnerseite[Index].entfernen
+	
+Public void SpielerEntf(int Index)
+	while Spielerseite[Index].class != Spieler
+		Index = input
+	Spielerseite[Index].entfernen
+	
